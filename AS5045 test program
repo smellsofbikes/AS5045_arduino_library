@@ -16,7 +16,7 @@ void loop()
   value = myAS5045.encoder_degrees();
   Serial.print("measured degrees: ");
   Serial.println(value);
-  if (myAS5040.encoder_error());
+  if (myAS5045.encoder_error());
   {
     Serial.println("error detected.");
     if (myAS5045.err_value.DECn) Serial.println("DECn error");
