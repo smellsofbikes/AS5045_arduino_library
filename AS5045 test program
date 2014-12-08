@@ -1,6 +1,6 @@
 #include <AS5045.h>
 
-AS5045 myAS5045(2,3,4); // data, clock, chip select, pins 7, 8, and 9 on the board.
+AS5045 myAS5045(2,3,4); // data, clock, chip select, pins 7, 8, and 9 on the AS5045 dev board.
 
 void setup()
 {
@@ -16,7 +16,7 @@ void loop()
   value = myAS5045.encoder_degrees();
   Serial.print("measured degrees: ");
   Serial.println(value);
-  if (myAS5045.encoder_error());
+  if (myAS5045.encoder_error())
   {
     Serial.println("error detected.");
     if (myAS5045.err_value.DECn) Serial.println("DECn error");
